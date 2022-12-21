@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: cursive;
+    }
+    body{
+        background: #d3e3fc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    /* Profile Card */
+    .card {
+        height: 500px;
+        width: 400px;
+        background: linear-gradient(-20deg, white 60%, #77a6a7 10%);
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        border-radius: 4px;
+        box-shadow: 1px 1px 10px grey;
+    }
+    #profile {
+        width: 180px;
+        border-radius: 50%;
+        display: block;
+        margin: 100px auto;
+        position: relative;
+        z-index: 2;
+        transition: .4s;
+    }
+    .card:hover{
+        background: white;
+        cursor: pointer;
+    }
+    .card:hover #profile{
+        transform: translate(-120px, -80px);
+        width: 120px;
+    }
+
+    /* Information */
+
+    .info {
+        transform: translateY(-70px);
+        color: #00887a; 
+        transition: .4s;
+    }
+    h1{
+        font-size: 40px;
+    }
+    h3{
+        font-size: 25px;
+    }
+    .card:hover .info{
+        transform: translate(70px, -280px);
+        color: tan;
+    }
+    .card:hover h1{
+        font-size: 30px;
+    }
+    .card:hover h3{
+        font-size: 20px;
+    }
+
+    /* Background */
+    .bckg{
+        height: 150px;
+        width: 100%;
+        background: #77a6a7;
+        position: absolute;
+        transition: .5s;
+        top: 30px;
+        z-index: 2;
+    }
+    .card:hover .bckg{
+        top: 420px;
+        background: #ffccbc;
+    }
+
+    /* Description */
+    .descrip{
+        width: 75%;
+        margin: 0px auto;
+        font-size: 25px;
+        padding: 20px;
+        opacity: 0;
+        transition: .5s;
+    }
+    .card:hover .descrip{
+        opacity: 1;
+        transform: translateY(-220px);
+        border-top: 2px solid #ffccbc;
+    }
+
+    /* Social Media acccouts */
+    .social{
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        z-index: 3;
+    }
+    .social img{
+        height: 40px;
+        width: 40px;
+        margin: 15px;
+        transition: .3s;
+        transform: translateY(60px);
+    }
+    .card:hover .social img{
+        transform: none;
+    }
+    .card .social img:hover{
+        transform: translateY(-10px);
+    }
+    .social img:nth-child(2){
+        transition-delay: .1s;
+    }
+    .social img:nth-child(3){
+        transition-delay: .2s;
+    }
+    .social img:nth-child(4){
+        transition-delay: .3s;
+    }
+
+</style>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="bckg"></div>
+            <img id="profile" src="img.jpg" alt="">
+            <div class="info">
+                <h1>John Johnathon</h1>
+                <h3>Enterprenuer</h3>
+            </div>
+            <div class="descrip">
+               <p>My work was to create something new and innovative, not to copy someone, and so I did it..</p> 
+                <p>-John Johnathan</p>
+            </div>
+            <div class="social">
+                <img src="img1.png" alt="">
+                <img src="img2.png" alt="">
+                <img src="img3.png" alt="">
+                <img src="img4.png" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
